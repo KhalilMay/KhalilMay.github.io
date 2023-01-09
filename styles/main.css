@@ -47,6 +47,10 @@ li{
     line-height: 1.9em;
 }
 
+.subProjectTitle{
+    font-style: italic;
+}
+
 #container--main{
     max-width: 700px;
     margin: 0 auto;
