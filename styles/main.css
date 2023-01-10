@@ -154,3 +154,10 @@ li{
     color: rgb(30, 190,214);
 
 }
+
+.card--detail-Project{
+    border-left: 1px solid var(--mainBorderColor);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+}
