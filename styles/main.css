@@ -6,18 +6,21 @@
     --mainLinkColor-light:#0da2b8;
     --mainBorderColor-light:rgb(218, 218, 218);
     --mainBgColor-light:rgb(249, 250,251);
+    --mainHoverColor-light:#d3d3d3;
 
     --mainTextColor-dark:#fff;
     --secondaryTextColor-dark:#adb0b1;
     --mainLinkColor-dark:rgb(30, 190,214);
     --mainBorderColor-dark:#393f40;
     --mainBgColor-dark:#23292F;
+    --mainHoverColor-dark: #363d3d;
 
     --mainTextColor:var(--mainTextColor-dark);
     --secondaryTextColor:var(--secondaryTextColor-dark);
     --mainLinkColor:var(--mainLinkColor-dark);
     --mainBorderColor:var(--mainBorderColor-dark);
     --mainBgColor:var(--mainBgColor-dark);
+    --mainHoverColor:var(--mainHoverColor-dark);
 }
 
 .checkbox:checked ~ div {
@@ -98,22 +101,30 @@ li{
 
 #socials--list{
     display: flex;
-    justify-content: space-between;
+    justify-content: stretch;
     column-gap: 1em;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
 #socials--list a{
+    display: block;
+    width: 100%;
+    padding: 0.8em 0px;
     font-weight: 300;
     color: var(--secondaryTextColor);
     font-size: 0.9em;
-    transition: 0.3s;
+    border: 1px solid var(--mainBorderColor);
+    border-radius: 25px;
+    
 }
 
 #socials--list a:hover{
+
     font-weight: 100;
     color: var(--mainLinkColor);
+    background-color: var(--mainHoverColor);
     font-size: 0.9em;
+    transition: all 1100ms ease;
 }
 
 #skills-list{

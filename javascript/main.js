@@ -11,6 +11,7 @@ checkBox.addEventListener('change', (e) =>{
         r.style.setProperty('--mainLinkColor', rs.getPropertyValue('--mainLinkColor-light'));
         r.style.setProperty('--mainBorderColor', rs.getPropertyValue('--mainBorderColor-light'));
         r.style.setProperty('--mainBgColor', rs.getPropertyValue('--mainBgColor-light'));
+        r.style.setProperty('--mainHoverColor', rs.getPropertyValue('--mainHoverColor-light'));
     }
     else{
         r.style.setProperty('--mainTextColor', rs.getPropertyValue('--mainTextColor-dark'));
@@ -18,6 +19,7 @@ checkBox.addEventListener('change', (e) =>{
         r.style.setProperty('--mainLinkColor', rs.getPropertyValue('--mainLinkColor-dark'));
         r.style.setProperty('--mainBorderColor', rs.getPropertyValue('--mainBorderColor-dark'));
         r.style.setProperty('--mainBgColor', rs.getPropertyValue('--mainBgColor-dark'));
+        r.style.setProperty('--mainHoverColor', rs.getPropertyValue('--mainHoverColor-dark'));
     }
 });
 }
