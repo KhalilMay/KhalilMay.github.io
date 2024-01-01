@@ -1,0 +1,192 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+:root{
+    --header-height: 3rem;
+
+    /*Colors*/
+    --hue-color: 225;
+    --mainColor: hsl((var(--hue-color)), 69%, 61%);
+    --mainColor-second:hsl((var(--hue-color)), 69%, 61%);
+    --mainColor-alt: hsl((var(--hue-color)), 57%, 53%);
+    --mainColor-light: hsl((var(--hue-color)), 92%, 85%);
+    --titleColor: hsl((var(--hue-color)), 8%, 15%);
+    --textColor: hsl((var(--hue-color)), 8%, 45%);
+    --textColor-light: hsl((var(--hue-color)), 8%, 65%);
+    --inputColor: hsl((var(--hue-color)), 70%, 96%);
+    --bodyColor: hsl((var(--hue-color)), 60%, 99%);
+    --containerColor: #fff;
+
+    /*Change the above color to the below and their shades
+    --mainTextColor-dark:#fff;
+    --secondaryTextColor-dark:#adb0b1;
+    --mainLinkColor-dark:rgb(30, 190,214);
+    --mainBorderColor-dark:#393f40;
+    --mainBgColor-dark:#23292F;
+    --mainHoverColor-dark: #363d3d;*/
+
+    /*Font CSS and sizing*/
+    --body-font: 'Poppins', sans-serif;
+
+    --bigFont-size: 2rem;
+    --h1Font-size: 1.5rem;
+    --h2Font-size: 1.25rem;
+    --h3Font-size: 1.125;
+    --normalFont-size: .938rem;
+    --smallFont-size: .813rem;
+    --smallerFont-size: .75rem;
+
+    --mediumWeight:500; 
+    --semiBoldWeight:600;
+
+    /*Margin bottom*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*Z-index*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+
+}
+
+/*CSS for Large Screens*/
+@media screen and (min-width: 968px){
+    :root{
+        --bigFont-size: 3rem;
+        --h1Font-size: 2.25rem;
+        --h2Font-size: 1.5rem;
+        --h3Font-size: 1.25;
+        --normalFont-size: 1rem;
+        --smallFont-size: .875rem;
+        --smallerFont-size: .813rem;
+    }
+    
+}
+/*End of CSS for Large Screens*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normalFont-size);
+    background-color: var(--bodyColor);
+    color: var(--textColor);
+}
+
+h1,h2,h3,h4{
+    color: var(--titleColor);
+    font-weight: var(--semiBoldWeight);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.section{
+    padding: 2rem 0 4rem;
+}
+
+.section-title{
+    font-size: var(--h1Font-size);
+}
+
+.section-subtitle{
+    display: block;
+    font-size: var(--smallFont-size);
+    margin-bottom: var(--mb-3);
+}
+
+.section-title, .section-subtitle{
+    text-align: center;
+}
+
+.container{
+    max-width: 768px;
+    margin-left: var(--mb1-5);
+    margin-right: var(--mb1-5);
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--bodyColor);
+}
+
+/* ------Navigation section------*/
+
+.nav{
+    max-width: 968px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo, .nav__toggle{
+    color: var(--titleColor);
+    font-weight: var(--normalFont-size);
+}
+
+
+.nav__logo:hover{
+    color: var(--mainColor);
+}
+
+
+.nav__toggle{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav__toggle:hover{
+    color: var(--mainColor);
+}
+
+@media screen and (max-width: 767px) {
+    .nav__menu{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--bodyColor);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    
+    }
+}
